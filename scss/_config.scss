@@ -1,0 +1,41 @@
+$primary-color: #333;
+$secondary-color: #06e6e6;
+$show-home-image: true;
+$background-image: url(/dist/images/cursors.jpg);
+
+
+@mixin easeOut {
+    // function to ease color in/out in different parts of the website called with @include easeOut
+    transition: all 0.5s ease-out;
+}
+
+@mixin setbackground {
+    @if $show-home-image {
+        background: $background-image;
+        background-attachment: fixed;
+        background-size: cover;
+
+        &:after {
+            content: ' ';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; // Level that different components have and decides which comes on top and which in the background.a
+            background: rgba($primary-color, 0.8);
+
+        }
+    }
+
+}
+
+@function set-text-color($color) {
+    @if (lightness($color)>40) {
+        @return #000;
+    }
+
+    @else {
+        @return #fff;
+    }
+}

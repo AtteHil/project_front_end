@@ -1,0 +1,66 @@
+@import 'config';
+@import 'menu';
+
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    @include setbackground;
+    background-color: $primary-color;
+    color: set-text-color($primary-color);
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+h1,
+h2 {
+    margin: 0;
+    font-weight: 400;
+
+    &.lg-heading {
+        font-size: 6rem;
+        outline: 3px solid $secondary-color;
+        outline-width: 5px;
+        margin-left: 1rem;
+
+    }
+
+    &.sm-heading {
+        margin-bottom: 2rem;
+        padding: 0.2rem 1rem;
+        margin-left: 4rem;
+
+    }
+
+}
+
+h3 {
+
+    padding-left: 1.5rem;
+}
+
+.Aboutus {
+    img {
+        width: 700px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 5rem;
+        border-radius: 10px;
+        border: 3px solid $secondary-color;
+    }
+}
+
+#main-footer {
+    text-align: center;
+    padding: 1rem;
+    background: darken($primary-color, 5);
+    color: set-text-color($primary-color);
+    height: 50px;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+}
