@@ -16,6 +16,105 @@ body {
     line-height: 1.5;
 }
 
+#aboutpage {
+    font-size: 6rem;
+    outline: 3px solid rgb(0, 255, 255);
+    outline-width: 5px;
+    margin-left: 1rem;
+    background: rgb(100, 100, 100);
+    padding-left: 1rem;
+    text-shadow: 2px 2px 0px $secondary-color;
+}
+
+.bio {
+    p {
+        font-size: 30px;
+        padding-left: 1.5rem;
+        text-shadow: 1px 1px 0px #000000;
+        color: white;
+    }
+
+}
+
+.boss-image {
+    width: 230px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    border: 3px solid $secondary-color;
+}
+
+.emp1 {
+    width: 230px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    border: 3px solid $secondary-color;
+}
+
+.emp2 {
+    width: 230px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    border: 3px solid $secondary-color;
+}
+
+.about-info {
+    padding-left: 3rem;
+    display: grid;
+    gap: 30px 15px;
+    grid-template-areas:
+        'bossimage emp-1 emp2image'
+        'emp-0 emp1image emp-2';
+    grid-template-columns: repeat(3, 1fr);
+
+    .boss-image {
+        grid-area: bossimage;
+        width: 230px;
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+        border: 3px solid $secondary-color;
+    }
+
+    .emp1 {
+        grid-area: emp1image;
+        width: 230px;
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+        border: 3px solid $secondary-color;
+    }
+
+    .emp2 {
+        grid-area: emp2image;
+        width: 230px;
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+        border: 3px solid $secondary-color;
+    }
+
+    .emp-0 {
+        grid-area: emp-0;
+    }
+
+    .emp-1 {
+        grid-area: emp-1;
+    }
+
+    .emp-2 {
+        grid-area: emp-2;
+    }
+}
+
 h1,
 h2 {
     margin: 0;
@@ -41,6 +140,7 @@ h2 {
 h3 {
 
     padding-left: 1.5rem;
+
 }
 
 .Aboutus {

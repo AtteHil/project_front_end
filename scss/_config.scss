@@ -2,6 +2,7 @@ $primary-color: #333;
 $secondary-color: #06e6e6;
 $show-home-image: true;
 $background-image: url(/dist/images/cursors.jpg);
+$gradient: linear-gradient(to bottom, rgb(1, 194, 178), rgb(100, 100, 100));
 
 
 @mixin easeOut {
@@ -11,20 +12,28 @@ $background-image: url(/dist/images/cursors.jpg);
 
 @mixin setbackground {
     @if $show-home-image {
-        background: $background-image;
-        background-attachment: fixed;
-        background-size: cover;
+        &#bg-img {
+            background: $background-image;
+            background-attachment: fixed;
+            background-size: cover;
 
-        &:after {
-            content: ' ';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1; // Level that different components have and decides which comes on top and which in the background.a
-            background: rgba($primary-color, 0.8);
+            &:after {
+                content: ' ';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1; // Level that different components have and decides which comes on top and which in the background.a
+                background: rgba($primary-color, 0.8);
 
+            }
+        }
+
+        &#about {
+            background: $gradient;
+            background-attachment: fixed;
+            height: 100vh;
         }
     }
 

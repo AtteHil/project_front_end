@@ -55,7 +55,7 @@
   .nav-item.show {
     transform: translate3d(0, 0, 0); }
   .nav-item.current > a {
-    color: #fff; }
+    color: white; }
 
 .nav-link {
   display: inline-block;
@@ -85,24 +85,105 @@
   box-sizing: border-box; }
 
 body {
-  background: url(/dist/images/cursors.jpg);
-  background-attachment: fixed;
-  background-size: cover;
   background-color: #333;
   color: #fff;
   height: 100%;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
-  body:after {
-    content: ' ';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: rgba(51, 51, 51, 0.8); }
+  body#bg-img {
+    background: url(/dist/images/cursors.jpg);
+    background-attachment: fixed;
+    background-size: cover; }
+    body#bg-img:after {
+      content: ' ';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(51, 51, 51, 0.8); }
+  body#about {
+    background: linear-gradient(to bottom, #01c2b2, #646464);
+    background-attachment: fixed;
+    height: 100vh; }
+
+#aboutpage {
+  font-size: 6rem;
+  outline: 3px solid cyan;
+  outline-width: 5px;
+  margin-left: 1rem;
+  background: #646464;
+  padding-left: 1rem;
+  text-shadow: 2px 2px 0px #06e6e6; }
+
+.bio p {
+  font-size: 30px;
+  padding-left: 1.5rem;
+  text-shadow: 1px 1px 0px #000000;
+  color: white; }
+
+.boss-image {
+  width: 230px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  border: 3px solid #06e6e6; }
+
+.emp1 {
+  width: 230px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  border: 3px solid #06e6e6; }
+
+.emp2 {
+  width: 230px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  border: 3px solid #06e6e6; }
+
+.about-info {
+  padding-left: 3rem;
+  display: grid;
+  gap: 30px 15px;
+  grid-template-areas: 'bossimage emp-1 emp2image' 'emp-0 emp1image emp-2';
+  grid-template-columns: repeat(3, 1fr); }
+  .about-info .boss-image {
+    grid-area: bossimage;
+    width: 230px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    border: 3px solid #06e6e6; }
+  .about-info .emp1 {
+    grid-area: emp1image;
+    width: 230px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    border: 3px solid #06e6e6; }
+  .about-info .emp2 {
+    grid-area: emp2image;
+    width: 230px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    border: 3px solid #06e6e6; }
+  .about-info .emp-0 {
+    grid-area: emp-0; }
+  .about-info .emp-1 {
+    grid-area: emp-1; }
+  .about-info .emp-2 {
+    grid-area: emp-2; }
 
 h1,
 h2 {
