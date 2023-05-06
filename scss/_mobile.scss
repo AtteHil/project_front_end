@@ -1,0 +1,78 @@
+@include mediaXl {}
+
+@include mediaLg {}
+
+@include mediaMd {
+    main {
+        align-items: center;
+        text-align: center;
+
+
+        .lg-heading {
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .boss-image {
+        align-self: center;
+        justify-self: center;
+    }
+
+    .emp1 {
+        align-self: center;
+        justify-self: center;
+    }
+
+    .emp2 {
+        align-self: center;
+        justify-self: center;
+    }
+
+    .about-info {
+        grid-template-areas:
+            'bossimage'
+            'emp-0'
+            'emp1image'
+            'emp-1'
+            'emp2image'
+            'emp-2';
+        grid-template-columns: 1fr;
+    }
+
+    .menu-nav {
+        height: 50vh;
+        transform: translate3d(0, -100%, 0);
+        float: none;
+        width: 100%;
+        min-height: 0;
+
+        &.show {
+
+            transform: translate3d(0, 0, 0);
+
+        }
+    }
+
+    .Aboutus {
+        img {
+            width: 300px;
+
+        }
+    }
+
+}
+
+@include mediaSm {
+    .about-info {
+
+        grid-template-areas:
+            'bossimage'
+            'emp-0'
+            'emp1image'
+            'emp-1'
+            'emp2image'
+            'emp-2';
+        grid-template-columns: 1fr;
+    }
+}

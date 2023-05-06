@@ -97,7 +97,7 @@ body {
     background-size: cover; }
     body#bg-img:after {
       content: ' ';
-      position: absolute;
+      position: fixed;
       top: 0;
       right: 0;
       width: 100%;
@@ -118,11 +118,20 @@ body {
   padding-left: 1rem;
   text-shadow: 2px 2px 0px #06e6e6; }
 
+h3 {
+  font-size: 30px;
+  color: #fff;
+  margin-bottom: 0; }
+
+h6 {
+  font-size: 15px;
+  color: #fff; }
+
 .bio p {
   font-size: 30px;
   padding-left: 1.5rem;
   text-shadow: 1px 1px 0px #000000;
-  color: white; }
+  color: #fff; }
 
 .boss-image {
   width: 230px;
@@ -150,8 +159,9 @@ body {
 
 .about-info {
   padding-left: 3rem;
+  padding-bottom: 3rem;
   display: grid;
-  gap: 30px 15px;
+  gap: 0.7rem;
   grid-template-areas: 'bossimage emp-1 emp2image' 'emp-0 emp1image emp-2';
   grid-template-columns: repeat(3, 1fr); }
   .about-info .boss-image {
@@ -201,9 +211,6 @@ h2 {
     padding: 0.2rem 1rem;
     margin-left: 4rem; }
 
-h3 {
-  padding-left: 1.5rem; }
-
 .Aboutus img {
   width: 700px;
   display: block;
@@ -211,6 +218,9 @@ h3 {
   margin-top: 5rem;
   border-radius: 10px;
   border: 3px solid #06e6e6; }
+
+.Aboutus h3 {
+  padding-left: 1.5rem; }
 
 #main-footer {
   text-align: center;
@@ -221,3 +231,38 @@ h3 {
   width: 100vw;
   position: fixed;
   bottom: 0; }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  .boss-image {
+    align-self: center;
+    justify-self: center; }
+  .emp1 {
+    align-self: center;
+    justify-self: center; }
+  .emp2 {
+    align-self: center;
+    justify-self: center; }
+  .about-info {
+    grid-template-areas: 'bossimage' 'emp-0' 'emp1image' 'emp-1' 'emp2image' 'emp-2';
+    grid-template-columns: 1fr; }
+  .menu-nav {
+    height: 50vh;
+    transform: translate3d(0, -100%, 0);
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    .menu-nav.show {
+      transform: translate3d(0, 0, 0); }
+  .Aboutus img {
+    width: 300px; } }
+
+@media screen and (max-width: 500px) {
+  .about-info {
+    grid-template-areas: 'bossimage' 'emp-0' 'emp1image' 'emp-1' 'emp2image' 'emp-2';
+    grid-template-columns: 1fr; } }

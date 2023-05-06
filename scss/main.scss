@@ -26,12 +26,23 @@ body {
     text-shadow: 2px 2px 0px $secondary-color;
 }
 
+h3 {
+    font-size: 30px;
+    color: set-text-color($primary-color);
+    margin-bottom: 0;
+}
+
+h6 {
+    font-size: 15px;
+    color: set-text-color($primary-color);
+}
+
 .bio {
     p {
         font-size: 30px;
         padding-left: 1.5rem;
         text-shadow: 1px 1px 0px #000000;
-        color: white;
+        color: set-text-color($primary-color);
     }
 
 }
@@ -65,8 +76,9 @@ body {
 
 .about-info {
     padding-left: 3rem;
+    padding-bottom: 3rem;
     display: grid;
-    gap: 30px 15px;
+    gap: 0.7rem;
     grid-template-areas:
         'bossimage emp-1 emp2image'
         'emp-0 emp1image emp-2';
@@ -104,6 +116,8 @@ body {
 
     .emp-0 {
         grid-area: emp-0;
+
+
     }
 
     .emp-1 {
@@ -137,11 +151,7 @@ h2 {
 
 }
 
-h3 {
 
-    padding-left: 1.5rem;
-
-}
 
 .Aboutus {
     img {
@@ -151,6 +161,10 @@ h3 {
         margin-top: 5rem;
         border-radius: 10px;
         border: 3px solid $secondary-color;
+    }
+
+    h3 {
+        padding-left: 1.5rem;
     }
 }
 
@@ -164,3 +178,5 @@ h3 {
     position: fixed;
     bottom: 0;
 }
+
+@import 'mobile';
