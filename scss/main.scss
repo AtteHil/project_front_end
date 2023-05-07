@@ -26,6 +26,24 @@ body {
     text-shadow: 2px 2px 0px $secondary-color;
 }
 
+#contact {
+
+    h1 {
+        background: rgb(100, 100, 100);
+    }
+
+    .lg-heading {
+        text-shadow: 2px 2px 0px $secondary-color;
+        padding-left: 1rem;
+    }
+
+    .sm-heading {
+        font-size: 35px;
+    }
+
+
+}
+
 h3 {
     font-size: 30px;
     color: set-text-color($primary-color);
@@ -165,6 +183,29 @@ h2 {
 
     h3 {
         padding-left: 1.5rem;
+    }
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+
+
+    div {
+        font-size: 30px;
+        border: 3px $secondary-color solid;
+        padding: 1rem;
+        margin-bottom: 3rem;
+        @include easeOut;
+
+        &:hover {
+            padding: 0.5rem 0.7rem;
+            background-color: white;
+            color: set-text-color($secondary-color);
+        }
     }
 }
 

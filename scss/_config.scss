@@ -30,11 +30,13 @@ $gradient: linear-gradient(to bottom, rgb(1, 194, 178), rgb(100, 100, 100));
             }
         }
 
-        &#about {
+        &#about,
+        &#contactus {
             background: $gradient;
             background-attachment: fixed;
             height: 100vh;
         }
+
     }
 
 }
